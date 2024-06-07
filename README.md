@@ -29,6 +29,6 @@ List of particles:
 ## To-Do list:
 
 - [ ] Make a file structure to regain readability
-- [ ] Make better comments in code 
+- [x] Make better comments in code
 - [ ] Optimise performance
 - [ ] Add pixel size
