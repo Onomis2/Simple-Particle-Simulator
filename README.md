@@ -11,6 +11,13 @@ This is a simple particle simulator I made using the love2D game engine without 
 
 ## Wiki:
 
+Keybinds:
+Mouse left click: Place particles
+Mouse right click: Erase particles
+Scroll: Size up and down
+1 - 9: Select particle
+R: Reset entire canvas
+
 List of particles:
 1. Concrete?
 2. Water

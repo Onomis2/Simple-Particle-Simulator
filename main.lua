@@ -8,13 +8,13 @@ local text = {}
 local particleType = 1
 
 
---MAIN CODE
+-- MAIN CODE
+
+-- Executes on load. Sets game to fullscreen and initialises the grid
 function love.load()
 
-    --Get screen size
     love.window.setMode(width, height, {fullscreen = true})
     
-    -- Initialize the grid
     for x = 1, width do
         grid[x] = {}
         for y = 1, height do
@@ -25,9 +25,9 @@ function love.load()
 end
 
 
---Execute every frame
+-- Executes every frame
 function love.update(dt)
-    --Get cursor 
+    --If mouse clicked, get cursor position and execute function
     if love.mouse.isDown(1) then
         local currentX, currentY = love.mouse.getPosition()
         SpawnParticle(currentX, currentY)
@@ -50,14 +50,14 @@ function love.update(dt)
 
     -- Debugging
     text[1] = "FPS: " .. math.floor(1 / dt)
-    text[3] = size
-    text[4] = "type: " .. particleType
+    text[2] = "Cursor size:" .. size
+    text[3] = "type: " .. particleType
 end
 
 
--- Draw onto the screen
+-- Draws frames
 function love.draw()
-    --Initialise local variables
+    -- Sets colors for each particle
     local colors = {
         [1] = {1, 1, 1}, -- Default
         [2] = {0, 0, 1}, -- Water
@@ -67,7 +67,7 @@ function love.draw()
         [6] = {1, 0, 0} -- Fire
     }
 
-
+    -- Draws the actual particle
     for x = 1, width do
         for y = 1, height do
             local type = grid[x][y]
@@ -85,6 +85,7 @@ function love.draw()
     end
 end
 
+-- FUNCTIONS
 -- Function for mouse wheel movement
 function love.wheelmoved(x, y)
     if y > 0 and size < 5000 then
@@ -94,6 +95,7 @@ function love.wheelmoved(x, y)
     end
 end
 
+-- Function for keyboard keys pressed. Refer to wiki for more information about keys
 function love.keypressed(key)
     text[9] = key
     if tonumber(key) and tonumber(key) >= 1 and tonumber(key) <= 9 then
@@ -108,6 +110,7 @@ function love.keypressed(key)
     end
 end
 
+-- Function that spawns particles at position of cursor
 function SpawnParticle(x, y)
     if x >= 1 and x <= width and y >= 1 and y <= height then
         for i = 0, size - 1 do
@@ -127,6 +130,7 @@ function SpawnParticle(x, y)
     end
 end
 
+-- Function that erases particles at position of mouse
 function EraseParticle(x, y)
     for i = 0, size - 1 do
         for j = 0, size - 1 do
@@ -214,9 +218,9 @@ function CheckRight(x, y, type)
 end
 
 
---special partical movements
+-- Special partical movements
 
---water
+-- Water
 function WaterCheckDown(x, y, type)
     local range = math.random(1,4)
     if y < height and not grid[x][y + range] then
@@ -259,11 +263,11 @@ function WaterCheckLeft(x, y, type)
     end
 end
 
---Sand
+-- Sand
 
---Gas
+-- Gas
 
---Steam
+-- Steam
 function SteamCheckUp(x, y, type)
     local range = math.random(1,4)
     if y < height and not grid[x][y - range] then
@@ -331,7 +335,7 @@ function SteamCheckDownLeft(x, y, type)
     end
 end
 
---Fire
+-- Fire
 function FireCheckDown(x, y, type)
 
     if y < height then
