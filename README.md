@@ -3,6 +3,8 @@
 ## Description:
 This is a simple particle simulator I made using the love2D game engine without using external any libraries or API's. I made this to learn more complex LUA coding and to have fun.
 
+This simulator can simulate some simple particles and their interactions like steam, sand, gas, fire and more.
+
 ## Instructions:
 
 1. Install love2d if it is not yet installed and make sure it is located somewhere where you can find it.
@@ -25,10 +27,19 @@ List of particles:
 4. Gas
 5. Steam
 6. Fire
+7. Strange matter
+Planned particles:
+8. Wood
 
 ## To-Do list:
 
-- [ ] Make a file structure to regain readability
+- [x] Make a file structure to regain readability
 - [x] Make better comments in code
-- [ ] Optimise performance
-- [ ] Add pixel size
+- [x] Optimise performance
+- [x] Add pixel size
+- [ ] Release executable file
+- [ ] Visible and centered cursor
+- [ ] Add more types
+- [ ] UI rework
+- [ ] Better colors
+- [ ] Better interactions
