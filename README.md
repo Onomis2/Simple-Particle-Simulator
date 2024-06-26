@@ -7,9 +7,9 @@ This simulator can simulate some simple particles and their interactions like st
 
 ## Instructions:
 
-1. Install love2d if it is not yet installed and make sure it is located somewhere where you can find it.
-2. Unzip particle.zip into a folder.
-3. Drag said folder onto love2d.exe.
+For windows: Download and open SPS.rar. Execute SPS.exe
+For Mac: Comming soon...
+For Linux: Comming soon...
 
 ## Wiki:
 
@@ -33,11 +33,11 @@ Planned particles:
 
 ## To-Do list:
 
-- [x] Make a file structure to regain readability
+- [x] Make a file structure to regain readability 
 - [x] Make better comments in code
-- [x] Optimise performance
-- [x] Add pixel size
-- [ ] Release executable file
+- [x] Optimise performance 2
+- [x] Add pixel size 
+- [x] Release executable file 
 - [ ] Visible and centered cursor
 - [ ] Add more types
 - [ ] UI rework
