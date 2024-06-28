@@ -94,7 +94,15 @@ local particles = {
     [7] = { -- Strange Matter
         move = function(grid, x, y)
             local moves = {
-                { x = math.random(1, 250), y = math.random(1, 250) },
+                { x = math.random(1, 250), y = math.random(1, 250) }
+            }
+            return moves
+        end
+    },
+    [8] = { -- Wood
+        move = function(grid, x, y)
+            local moves = {
+                { x = x, y = y}
             }
             return moves
         end

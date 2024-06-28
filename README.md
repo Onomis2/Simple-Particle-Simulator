@@ -43,3 +43,5 @@ Planned particles:
 - [ ] UI rework
 - [ ] Better colors
 - [ ] Better interactions
+
+## Latest patchnotes:
