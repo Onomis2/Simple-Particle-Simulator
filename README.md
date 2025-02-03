@@ -11,14 +11,14 @@ This simulator can simulate some simple particles and their interactions like st
 * For Mac: Comming soon...
 * For Linux: Comming soon...
 
-## Wiki:
-
-Keybinds:
+## Keybinds:
 Mouse left click: Place particles
 Mouse right click: Erase particles
 Scroll: Size up and down
 1 - 9: Select particle
 R: Reset entire canvas
+space: Pause/Unpause
+.: Simulate a single frame when paused
 
 List of particles:
 1. Concrete?
@@ -27,9 +27,7 @@ List of particles:
 4. Gas
 5. Steam
 6. Fire
-7. Strange matter
-Planned particles:
-8. Wood
+7. Wood
 
 ## To-Do list:
 
@@ -38,10 +36,28 @@ Planned particles:
 - [x] Optimise performance 2
 - [x] Add pixel size 
 - [x] Release executable file 
-- [ ] Visible and centered cursor
-- [ ] Add more types
-- [ ] UI rework
+- [x] Visible and centered cursor
+- [x] UI rework
+- [ ] Selectable particles from UI
+- [ ] Selectable categories from UI
+- [ ] Selectable options from UI
+- [ ] More particles
+- [ ] More interactions
 - [ ] Better colors
-- [ ] Better interactions
+- [x] Better interactions
+- [ ] Compatability with any screen resolution and refresh rate
+- [ ] Compatibility with any operating system
+- [ ] Optimize behavior
+- [ ] Optimize interactions
 
 ## Latest patchnotes:
+
+* *Total rewrite of everything.
+* *Updated UI
+* *Updated physics
+* *Updated interactions and behavior
+* *Improved performance
+* +Added reset
+* +Added pausing, stepping, unpausing
+* -Removed murky water (Will come back in later updates)
+* -Removed strange matter
